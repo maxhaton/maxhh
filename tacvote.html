@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>A D3 map using topojson</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> </script>
+
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background: whitesmoke;
+        }
+
+        h1 {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            font-family: "Proxima Nova", Montserrat, sans-serif;
+            font-size: 2em;
+            font-weight: 100;
+            color: #005DAA;
+            /* offical UK Kentucky blue */
+        }
+
+        .county {
+            stroke: #fff;
+            fill: #005DAA;
+        }
+    </style>
+</head>
+
+<body>
+    <navbar>
+        <h1>A Post-Mortem of Tactical Voting in 2019</h1>
+    </navbar>
+
+    <script>
+        $.getJSON('https://tacticalvote.co.uk/data/recommendations.json', function (data) {
+            alert(data[0]);
+        });
+    </script>
+
+
+</body>
+
+</html>
